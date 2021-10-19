@@ -1,0 +1,142 @@
+
+
+$c_primary : rgb(20, 149, 235);
+
+*,*:hover,*:focus{
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding:0px;  
+    background-color: rgba(238, 238, 238, 0.199); 
+}
+
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px;
+    display: block;
+    padding: 0px;
+}
+
+hr{
+    opacity: 0.2;
+}
+
+
+h1{
+    font-size: clamp(2rem,10vw,3.5em);
+}
+.container{
+    padding: 1rem;
+    width: clamp(200px,80vw,900px);
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-control{
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    padding: 12px 1em;
+    font-size: 1rem;
+    border-radius: 0px;
+    width: 100%;
+    background-color: #fff;
+    &[type='radio'], &[type='checkbox']{
+        display: inline-block;
+        width: auto;
+        margin-top: 12px;
+
+        
+        & + label{
+            font-size: 1rem;
+        }
+        &.error + label{
+            color: rgb(197, 49, 0) !important;
+        }
+    }
+
+    &.error{
+        border-color: rgb(197, 49, 0) !important;
+        background-color: rgb(255, 248, 247);
+    }
+
+    &:focus{
+        border-color: rgba(0, 0, 0, 0.267);
+    }
+}
+.form-control{
+    margin-bottom: 1em;
+    label{
+        display: inline-block;
+        padding-bottom: .5em;
+    }
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:1em;
+    .form-control{
+        margin-bottom: 0px;
+        
+    }
+}
+
+
+.btn-primary{
+    padding: 12px 1em;
+    font-size: 1rem;
+    border: 1px solid $c_primary;
+    border-radius: 0px;
+    background-color: $c_primary;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+        background-color: darken($c_primary, 10%);
+        border-color: darken($c_primary, 10%);
+    }
+}
+
+
+.btn-primary-outline{
+    padding: 12px 1em;
+    font-size: 1rem;
+    border: 1px solid $c_primary;
+    border-radius: 0px;
+    background-color: transparent;
+    color: $c_primary;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+    &:hover{
+        background-color: $c_primary;
+        color: #fff;
+    }
+}
+
+.col-2{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - 1em));
+    grid-column-gap: 1em;
+}
+
+.msg-box{
+    background-color: rgba(255, 216, 203, 0.452);
+    padding: 1em 1em 1em 2.5em;
+    border-radius: 5px;
+    color: rgb(197, 49, 0);
+    display: none;
+
+    &.active{
+        display: block;
+    }
+}
+
