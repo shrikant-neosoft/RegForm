@@ -2,9 +2,6 @@
 
 var datas = "I am Shrikant Pradhan. How are You!!";
 
-//var exp2 = /^[a-zA-Z0-9_-\.]+@[a-zA-Z]+\.[a-zA-Z]{2|3}$/;
-
-
 
 var regMob = (data)=>{
     var exp1 = /^\+91+[6-9][0-9]{9}$/;
